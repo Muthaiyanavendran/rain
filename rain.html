@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Change Program</title>
+  <style>
+    body {
+      background-color: #000000; /* Initial background color */
+    }
+  </style>
+  <script>
+    function changeColor() {
+      var colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF']; // Array of colors
+      var randomColor = colors[Math.floor(Math.random() * colors.length)]; // Randomly select a color from the array
+      document.body.style.backgroundColor = randomColor; // Set the background color of the body
+    }
+  </script>
+   <script type="text/javaScript">
+    function testKeyCode(e) {
+    var keycode;
+    if (window.event) keycode = window.event.keyCode;
+    else if (e) keycode = e.which;
+    var e = e || window.event;
+               if (e.ctrlKey &&
+                      (e.keyCode === 67 ||
+                       e.keyCode === 86 ||
+                       e.keyCode === 85 ||
+                       e.keyCode === 117)) {
+        alert('Buy Premium MemberShip ');
+       return false;
+       } else {
+        return true;
+       }
+    }
+    document.onkeydown = testKeyCode;
+    </script>
+</head>
+<body>
+  <h1><marquee ></marquee></h1>
+  <button onclick="changeColor()">Change Color</button>
+</body>
+</html>
